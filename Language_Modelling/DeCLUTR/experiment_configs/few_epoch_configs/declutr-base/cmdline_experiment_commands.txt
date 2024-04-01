@@ -1,0 +1,55 @@
+### with all possible data for different span lengths - the min_length is based on num_anchors*max_span_length*2 ###
+
+# run declutr-base with min 64 span| 1 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_1_anch_2_pos_min_64.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_64/ --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_64/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_64/transformer_format/
+
+
+# run declutr-base with min 64 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_64.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_64 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_64/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_64/transformer_format/
+
+
+# run declutr-base with min 128 span| 1 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_1_anch_2_pos_min_128.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_128 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_128/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/1_anch_2_pos_min_128/transformer_format/
+
+# run declutr-base with min 128 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_128.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_128 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_128/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_128/transformer_format/
+
+# run declutr-base with min 256 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_256.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_256 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_256/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_256/transformer_format/
+
+# run declutr-base with min 512 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_512.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_512 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_512/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_512/transformer_format/
+
+# run declutr-base with min 1024 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_1024.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_1024 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_1024/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_1024/transformer_format/
+
+# run declutr-base with min 2048 span| 2 anchor | 2 positives 
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_2_anch_2_pos_min_2048.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_2048/ --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_2048/ --save_directory /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/2_anch_2_pos_min_2048/transformer_format/
+
+
+##### use the below for testing out any changes etc before scaling use_amp
+allennlp train ./experiment_configs/few_epoch_configs/declutr-base/declutr_mimic_code_testing.jsonnet --serialization-dir /mnt/sdg/niallt/saved_models/declutr/mimic/few_epoch/declutr-base/code_testing/ --include-package "declutr" -f

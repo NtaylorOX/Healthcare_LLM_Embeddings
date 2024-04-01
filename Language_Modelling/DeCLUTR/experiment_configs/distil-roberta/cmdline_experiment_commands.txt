@@ -1,0 +1,11 @@
+# run distil-roberta with min 128 span| 1 anchor | 2 positives 
+allennlp train .\experiment_configs\distil-roberta\declutr_small_incident_1_anch_2_pos_min_128.jsonnet --serialization-dir E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_1_anch_2_pos_min_128 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_1_anch_2_pos_min_128/ --save_directory E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_1_anch_2_pos_min_128/transformer_format/
+
+# run distil-roberta with min 256 span| 2 anchor | 2 positives 
+allennlp train .\experiment_configs\distil-roberta\declutr_small_incident_2_anch_2_pos_min_256.jsonnet --serialization-dir E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_2_anch_2_pos_min_256 --include-package "declutr" -f
+
+# transform model to transformers pretrained format
+python ./scripts/save_pretrained_hf.py --archive_file E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_2_anch_2_pos_min_256/ --save_directory E:/saved_models/declutr/incident/distilroberta/declutr_small_incident_2_anch_2_pos_min_256/transformer_format/
